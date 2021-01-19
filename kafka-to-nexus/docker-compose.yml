@@ -21,25 +21,15 @@ services:
       KAFKA_CREATE_TOPICS: "filewriter_config:1:1, filewriter_status:1:1"
 
   # cat:
-  #   image: confluentinc/cp-kafkacat
+  #   image: centos:7
   #   depends_on:
   #     - kafka
   #   volumes:
-  #     - ./launch-files/launch_kafkacat.sh:/launch.sh
+  #     - ./kafkacat:/kafkacat:ro
+  #     - ./launch-files/launch_kafkacat.sh:/launch.sh:ro
   #   environment:
   #     KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
   #   command: /launch.sh
-
-  cat:
-    image: centos:7
-    depends_on:
-      - kafka
-    volumes:
-      - ./kafkacat:/kafkacat:ro
-      - ./launch-files/launch_kafkacat.sh:/launch.sh:ro
-    environment:
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
-    command: /launch.sh
 
   kafka-to-nexus:
     image: mbrambilla/kafka-to-nexus:latest
@@ -48,5 +38,11 @@ services:
     environment:
       KAFKA_BROKER: 192.168.99.100
       KAFKA_PORT: 9092
-      COMMAND_TOPIC: filewriter_config
-      STATUS_TOPIC: filewriter_status
+      COMMAND_URI: 192.168.99.100:9092/filewriter_config
+      STATUS_URI: 192.168.99.100:9092/filewriter_status
+      HDF_OUTPUT_PREFIX: /output-files
+    volumes:
+      - ./kafkacat:/kafkacat:ro
+      - ./launch-files/launch_filewriter.sh:/launch.sh:ro
+      - ./output-files:/output-files:rw
+    command: ./launch.sh
