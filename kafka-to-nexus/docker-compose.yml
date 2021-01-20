@@ -45,4 +45,4 @@ services:
       - ./kafkacat:/kafkacat:ro
       - ./launch-files/launch_filewriter.sh:/launch.sh:ro
       - ./output-files:/output-files:rw
-    command: ./launch.sh
+    # command: ./launch.sh
