@@ -31,5 +31,5 @@ services:
       RESPONSE_TOPIC_URI: just-bin-it_response
     volumes:
       - ./launch-files/launch_just-bin-it.sh:/launch.sh:ro
-      - ./kafkacat:/kafkacat:ro
+      - ../kafkacat/kafkacat:/kafkacat:ro
     command: /launch.sh

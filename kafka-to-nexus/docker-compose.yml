@@ -20,17 +20,6 @@ services:
       KAFKA_BROKER_ID: 0
       KAFKA_CREATE_TOPICS: "filewriter_config:1:1, filewriter_status:1:1"
 
-  # cat:
-  #   image: centos:7
-  #   depends_on:
-  #     - kafka
-  #   volumes:
-  #     - ./kafkacat:/kafkacat:ro
-  #     - ./launch-files/launch_kafkacat.sh:/launch.sh:ro
-  #   environment:
-  #     KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
-  #   command: /launch.sh
-
   kafka-to-nexus:
     image: mbrambilla/kafka-to-nexus:latest
     depends_on:
@@ -42,7 +31,7 @@ services:
       STATUS_URI: 192.168.99.100:9092/filewriter_status
       HDF_OUTPUT_PREFIX: /output-files
     volumes:
-      - ./kafkacat:/kafkacat:ro
+      - ../kafkacat/kafkacat:/kafkacat:ro
       - ./launch-files/launch_filewriter.sh:/launch.sh:ro
       - ./output-files:/output-files:rw
     # command: ./launch.sh
