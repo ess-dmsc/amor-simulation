@@ -30,3 +30,7 @@ services:
       STATUS_TOPIC_URI: 192.168.99.100:9092/forwarder_status
       STORAGE_TOPIC_URI: 192.168.99.100:9092/forwarder_storage
       OUTPUT_BROKER_URI: 192.168.99.100:9092
+    volumes:
+      - ./launch-files/launch_forwarder.sh:/launch.sh:ro
+      - ./kafkacat:/kafkacat:ro
+    command: /launch.sh
