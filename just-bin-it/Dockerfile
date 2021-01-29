@@ -1,11 +1,11 @@
 FROM centos:7
 
-COPY just-bin-it.tar.gz .
-
 RUN yum -y install centos-release-scl \
 	&& yum -y install rh-python38 \
 	&& yum -y clean all \
 	&& echo "source /opt/rh/rh-python38/enable" >> /root/.bashrc
+
+COPY just-bin-it.tar.gz .
 
 RUN tar xzvf just-bin-it.tar.gz \
 	&& mv just-bin-it-master just-bin-it \

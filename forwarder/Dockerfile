@@ -1,11 +1,11 @@
 FROM centos:7
 
-COPY forwarder.tar.gz .
-
 RUN yum -y install centos-release-scl \
 	&& yum -y install rh-python38 \
 	&& yum -y clean all \
 	&& echo "source /opt/rh/rh-python38/enable" >> /root/.bashrc
+
+COPY forwarder.tar.gz .
 
 RUN tar xzvf forwarder.tar.gz \
 	&& cd forwarder-master \
