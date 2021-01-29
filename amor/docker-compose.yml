@@ -1,8 +1,13 @@
 version: "3"
 
+networks:
+  default:
+
 services:
   zookeeper:
     image: zookeeper:3.4
+    networks:
+      - default
 
   kafka:
     image: wurstmeister/kafka:latest
@@ -11,6 +16,8 @@ services:
       - zookeeper
     ports:
       - "9092:9092"
+    networks:
+      - default
     environment:
       KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
       KAFKA_ADVERTISED_PORT: 9092
@@ -23,6 +30,8 @@ services:
     image: mbrambilla/forwarder
     depends_on:
       - kafka
+    networks:
+      - default
     environment:
       KAFKA_BROKER: 192.168.99.100
       KAFKA_PORT: 9092
@@ -30,11 +39,17 @@ services:
       STATUS_TOPIC_URI: 192.168.99.100:9092/forwarder_status
       STORAGE_TOPIC_URI: 192.168.99.100:9092/forwarder_storage
       OUTPUT_BROKER_URI: 192.168.99.100:9092
+    volumes:
+      - ./launch-files/launch_forwarder.sh:/launch.sh:ro
+      - ../kafkacat/kafkacat:/kafkacat:ro
+    command: /launch.sh
 
   kafka-to-nexus:
     image: mbrambilla/kafka-to-nexus:latest
     depends_on:
       - kafka
+    networks:
+      - default
     environment:
       KAFKA_BROKER: 192.168.99.100
       KAFKA_PORT: 9092
@@ -42,7 +57,7 @@ services:
       STATUS_URI: 192.168.99.100:9092/filewriter_status
       HDF_OUTPUT_PREFIX: /output-files
     volumes:
-      - ./kafkacat:/kafkacat:ro
+      - ../kafkacat/kafkacat:/kafkacat:ro
       - ./launch-files/launch_filewriter.sh:/launch.sh:ro
       - ./output-files:/output-files:rw
     command: ./launch.sh
@@ -51,6 +66,8 @@ services:
     image: mbrambilla/just-bin-it:latest
     depends_on:
       - kafka
+    networks:
+      - default
     environment:
       KAFKA_BROKER: 192.168.99.100
       BROKER_URI: 192.168.99.100:9092
@@ -59,5 +76,19 @@ services:
       RESPONSE_TOPIC_URI: just-bin-it_response
     volumes:
       - ./launch-files/launch_just-bin-it.sh:/launch.sh:ro
-      - ./kafkacat:/kafkacat:ro
+      - ../kafkacat/kafkacat:/kafkacat:ro
     command: /launch.sh
+  # amor-simulation:
+  #   image: sinq-epics
+  #   networks:
+  #     - amor_default
+  #   volumes:
+  #     - ./amor-ioc-sim:/ioc/sinq-ioc/amor-ioc-sim:ro
+  #     - ./launch-files/launch_amor-ioc-sim.sh:/launch.sh:ro
+  #   ports:
+  #     - 5064:5064/tcp
+  #     - 5064:5064/udp
+  #     - 5080:5080/tcp
+  #     - 5080:5080/udp
+  #     - 8080:8080
+  #   command: /launch.sh
