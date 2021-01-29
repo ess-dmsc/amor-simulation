@@ -1,0 +1,1248 @@
+record (bi, "$(PREFIX)SPS1:ConnStatusFetch") {
+            field (DTYP, "S7plcFW stat")
+            field (INP,  "@$(SPS-R1)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+record (bi, "$(PREFIX)SPS1:ConnStatusWrite") {
+            field (DTYP, "S7plcFW stat2")
+            field (INP,  "@$(SPS-R1)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+
+record (bi, "$(PREFIX)SPS2:ConnStatusFetch") {
+            field (DTYP, "S7plcFW stat")
+            field (INP,  "@$(SPS-R2)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+record (bi, "$(PREFIX)SPS2:ConnStatusWrite") {
+            field (DTYP, "S7plcFW stat2")
+            field (INP,  "@$(SPS-R2)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+
+  record (bi, "$(PREFIX)SPS3:ConnStatusFetch") {
+            field (DTYP, "S7plcFW stat")
+            field (INP,  "@$(SPS-W)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+record (bi, "$(PREFIX)SPS3:ConnStatusWrite") {
+            field (DTYP, "S7plcFW stat2")
+            field (INP,  "@$(SPS-W)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+
+
+record(bi, "$(PREFIX)P1:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/68 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")    }
+    
+record(bi, "$(PREFIX)P1:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/136 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")    }
+    
+record(bi, "$(PREFIX)P1:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/204 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P1:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/272 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P2:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/340 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P2:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/408 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P2:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/476 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P2:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/544 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P3:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/612 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P3:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/680 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P3:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/748 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P3:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/816 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P4:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/884 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P4:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/952 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P4:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1020 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P4:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1088 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P5:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1156 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P5:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1224 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P5:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1292 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P5:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1360 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P6:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1428 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P6:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1496 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P6:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1564 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P6:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1632 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P7:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1700 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P7:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1768 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P7:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1836 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P7:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1904 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P8:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/1972 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P8:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2040 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P8:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2108 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P8:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2176 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P9:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2244 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P9:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2312 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P9:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2380 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P9:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2448 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P10:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2516 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P10:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2584 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P10:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2652 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P10:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2720 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P11:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2788 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P11:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2856 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P11:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2924 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P11:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/2992 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P12:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3060 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P12:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3128 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P12:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3196 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P12:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3264 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P13:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3332 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P13:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3400 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P13:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3468 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P13:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3536 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P14:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3604 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P14:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3672 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P14:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3740 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P14:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3808 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P15:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3876 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P15:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/3944 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P15:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4012 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P15:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4080 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P16:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4148 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P16:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4216 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P16:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4284 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P16:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4352 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P17:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4420 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P17:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4488 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P17:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4556 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P17:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4624 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P18:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4692 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P18:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4760 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P18:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4828 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P18:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4896 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)MCU1:FineAdjustable") {
+              field (DTYP, "S7plcFW")
+              field (INP,  "@$(SPS-R1)/4964 T=BYTE")
+              field (SCAN, "I/O Intr")
+              }
+record(bi, "$(PREFIX)MCU1:Move") {
+              field (DTYP, "S7plcFW")
+              field (INP,  "@$(SPS-R1)/5032 T=BYTE")
+              field (SCAN, "I/O Intr")
+              }
+
+
+record(bi, "$(PREFIX)P19:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/68 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P19:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/136 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P19:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/204 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P19:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/272 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P20:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/340 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P20:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/408 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P20:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/476 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P20:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/544 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P21:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/612 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P21:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/680 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P21:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/748 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P21:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/816 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P22:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/884 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P22:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/952 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P22:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1020 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P22:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1088 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P23:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1156 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P23:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1224 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P23:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1292 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P23:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1360 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P24:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1428 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P24:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1496 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P24:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1564 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P24:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1632 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P25:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1700 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P25:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1768 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P25:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1836 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P25:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1904 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P26:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/1972 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P26:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2040 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P26:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2108 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P26:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2176 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P27:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2244 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P27:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2312 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P27:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2380 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P27:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2448 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P28:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2516 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P28:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2584 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P28:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2652 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P28:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2720 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P29:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2788 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P29:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2856 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P29:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2924 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P29:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/2992 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P30:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3060 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P30:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3128 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P30:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3196 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P30:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3264 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P31:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3332 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P31:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3400 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P31:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3468 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P31:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3536 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P32:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3604 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P32:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3672 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P32:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3740 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P32:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3808 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P33:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3876 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P33:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/3944 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P33:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4012 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P33:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4080 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P34:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4148 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P34:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4216 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P34:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4284 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P34:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4352 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P35:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4420 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P35:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4488 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P35:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4556 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P35:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4624 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+
+
+record(bi, "$(PREFIX)P36:Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4692 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P36:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4760 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P36:ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4828 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)P36:Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4896 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(PREFIX)MCU2:FineAdjustable") {
+              field (DTYP, "S7plcFW")
+              field (INP,  "@$(SPS-R2)/4964 T=BYTE")
+              field (SCAN, "I/O Intr")
+              }
+record(bi, "$(PREFIX)MCU2:Move") {
+              field (DTYP, "S7plcFW")
+              field (INP,  "@$(SPS-R2)/5032 T=BYTE")
+              field (SCAN, "I/O Intr")
+              }
+
+
+record(bo, "$(PREFIX)Select:P1") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=0")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P2") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=1")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P3") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=2")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P4") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=3")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P5") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=4")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P6") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=5")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P7") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=6")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P8") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=7")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P9") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=8")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P10") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=9")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P11") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=10")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P12") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=11")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P13") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=12")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P14") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=13")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P15") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=14")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P16") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/2 T=WORD B=15")
+       field(PINI, "YES")
+     }
+  
+
+record(bo, "$(PREFIX)Select:P17") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=0")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P18") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=1")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P19") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=2")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P20") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=3")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P21") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=4")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P22") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=5")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P23") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=6")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P24") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=7")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P25") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=8")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P26") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=9")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P27") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=10")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P28") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=11")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P29") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=12")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P30") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=13")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P31") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=14")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P32") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/4 T=WORD B=15")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P33") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=0")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P34") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=1")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P35") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=2")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:P36") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=3")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:FineAdjustment1") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=4")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:FineAdjustment2") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=5")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:FineAdjustment3") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=6")
+       field(PINI, "YES")
+     }
+  
+record(bo, "$(PREFIX)Select:FineAdjustment4") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/6 T=WORD B=7")
+       field(PINI, "YES")
+     }
+  
+record(ao, "$(PREFIX)Select:Empty") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(SPS-W)/7 T BYTE")
+       field(PINI, "YES")
+     }

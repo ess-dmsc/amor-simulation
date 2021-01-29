@@ -1,0 +1,5 @@
+record(bo, "$(P)$(M):Select") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@$(PORT)/$(B) T=WORD B=$(I)")
+       field(PINI, "YES")
+     }

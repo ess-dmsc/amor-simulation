@@ -1,0 +1,51 @@
+file "$(TOP)/db/basic_asyn_motor.db"
+{
+pattern
+{P,             N,     M,          DTYP,  PORT, ADDR, DESC,  EGU,      DIR,   VELO,  VBAS, ACCL, BDST, BVEL, BACC, MRES, PREC, DHLM, DLLM,       RDBD, INIT}
+
+{SQ:AMOR:blende:, 1, "D1T",     "asynMotor",  blende, 1 , "d1t",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 2, "D1B",     "asynMotor",  blende, 2 , "d1b",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 3, "D1R",     "asynMotor",  blende, 3 , "d1r",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 4, "D1L",     "asynMotor",  blende, 4 , "d1l",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+
+{SQ:AMOR:blende:, 5, "D2Z",     "asynMotor",  blende, 5 , "d2z",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 6, "D2T",     "asynMotor",  blende, 6 , "d2t",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 7, "D2B",     "asynMotor",  blende, 7 , "d2b",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 8, "D2R",     "asynMotor",  blende, 8 , "d2r",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:, 9, "D2L",     "asynMotor",  blende, 9 , "d2l",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+
+{SQ:AMOR:blende:,10, "D3Z",     "asynMotor",  blende,10 , "d3z",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:,11, "D3T",     "asynMotor",  blende,11 , "d3t",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:,12, "D3B",     "asynMotor",  blende,12 , "d3b",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:,13, "D3R",     "asynMotor",  blende,13 , "d3r",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:,14, "D3L",     "asynMotor",  blende,14 , "d3l",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+
+{SQ:AMOR:blende:,15, "D4V",     "asynMotor",  blende,15, "d4v",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+{SQ:AMOR:blende:,16, "D4H",     "asynMotor",  blende,16, "d4h",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  80,   -80, .2,  ""}
+
+}
+
+
+file "$(TOP)/db/motorMessage.db"
+{
+pattern
+{P,N, M,PORT}
+{SQ:AMOR:blende:, 1, "D1T",blende}
+{SQ:AMOR:blende:, 2, "D1B",blende}
+{SQ:AMOR:blende:, 3, "D1R",blende}
+{SQ:AMOR:blende:, 4, "D1R",blende}
+{SQ:AMOR:blende:, 5, "D2Z",blende}
+{SQ:AMOR:blende:, 6, "D2T",blende}
+{SQ:AMOR:blende:, 7, "D2B",blende}
+{SQ:AMOR:blende:, 8, "D2R",blende}
+{SQ:AMOR:blende:, 9, "D2L",blende}
+{SQ:AMOR:blende:,10, "D3Z",blende}
+{SQ:AMOR:blende:,11, "D3T",blende}
+{SQ:AMOR:blende:,12, "D3B",blende}
+{SQ:AMOR:blende:,13, "D3R",blende}
+{SQ:AMOR:blende:,14, "D3L",blende}
+{SQ:AMOR:blende:,15, "D4V",blende}
+{SQ:AMOR:blende:,16, "D4H",blende}
+
+}
+

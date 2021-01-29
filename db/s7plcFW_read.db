@@ -1,0 +1,24 @@
+
+record(bi, "$(P)$(M):Selectable") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(PORT)/$(B) T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")    }
+    
+record(bi, "$(P)$(M):Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(PORT)/$(B)+68 T=BYTE B=0")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")    }
+    
+record(bi, "$(P)$(M):ParkPosition") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(PORT)/$(B)+136 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+    
+record(bi, "$(P)$(M):Alarm") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(PORT)/$(B)+204 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }

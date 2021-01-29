@@ -1,0 +1,42 @@
+# This code integrates the beam intensity signal during the
+# time where the integration is activated (SWITCH = 1). 
+# It also counts the time during which the integration occured.
+
+
+# this is a switch which can be set to activate/deactivate the counting
+record(bi, "$(P)SWITCH")
+{
+field(DTYP,"Soft Channel")
+field(ZNAM,"Low")
+field(ONAM,"High")
+}
+
+## This is an accumulator for the beam intensity integral
+record(ai, "$(P)ACCINT")
+{
+field(DTYP, "Soft Channel")
+field(LINR, "LINEAR")
+}
+#
+#
+## This is an accumulator for the exposure time
+#record(ai, "$(P)ACCTIME")
+#{
+#field(DTYP, "Soft Channel")
+#field(LINR, "LINEAR")
+#}
+#
+## This record computes the integral of the beam intensity
+## (gated by the SWITCH signal)
+record(calcout, "$(P)BEAMINT")
+{
+field(SCAN,".1 second")
+field(INPA,"$(AI)")
+field(INPB,"$(P)SWITCH")
+field(INPD,"$(P)ACCINT")
+field(CALC,"(B >= 1) ? D + A : D")
+field(OUT,"$(P)ACCINT")
+field(OOPT,"On Change")
+field(DOPT,"Use CALC")
+}
+

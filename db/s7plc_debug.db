@@ -1,0 +1,17 @@
+record(bi, "$(PREFIX)P1:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/136 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")    }
+
+record(bi, "$(PREFIX)P18:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R1)/4760 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }
+
+record(bi, "$(PREFIX)P36:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(SPS-R2)/4760 T=BYTE")
+      field (SCAN, "I/O Intr")
+    }

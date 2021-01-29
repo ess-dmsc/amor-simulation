@@ -1,0 +1,6 @@
+# workaround over set position
+record(ao, "$(P)$(M)-SetPosition") {
+    field(DTYP, "asynFloat64")
+    field(OUT, "@asyn($(PORT),$(N),1) SET_MOTOR_POSITION")
+    field(PINI, "YES")
+}

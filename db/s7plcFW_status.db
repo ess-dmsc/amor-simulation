@@ -1,0 +1,15 @@
+record (bi, "$(P)$(M):ConnStatusFetch") {
+            field (DTYP, "S7plcFW stat")
+            field (INP,  "@$(PORT)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+record (bi, "$(P)$(M):ConnStatusWrite") {
+            field (DTYP, "S7plcFW stat2")
+            field (INP,  "@$(PORT)")
+            field (ZNAM, "Disconnected")
+            field (ONAM, "Connected")
+            field (SCAN, "I/O Intr")
+        }
+
