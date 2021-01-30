@@ -24,7 +24,7 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_MESSAGE_MAX_BYTES: 20000000
       KAFKA_BROKER_ID: 0
-      KAFKA_CREATE_TOPICS: "forwarder_data:1:1,forwarder_status:1:1,forwarder_config:1:1,filewriter_status:1:1,filewriter_config:1:1, just-bin-it_config:1:1, just-bin-it_heartbeat:1:1, just-bin-it_response:1:1"
+      KAFKA_CREATE_TOPICS: "AMOR_forwarderData:1:1,AMOR_forwarderStatus:1:1,AMOR_forwarderConfig:1:1,AMOR_filewriterStatus:1:1,AMOR_filewriterConfig:1:1, AMOR_histCommands:1:1, AMOR_histHeartbeat:1:1, AMOR_histResponse:1:1, AMOR_histograms:1:1, FREIA_detector:1:1, AMOR_nicosCacheHistory:1:1, AMOR_nicosCacheCompacted:1:1:compact"
 
   forwarder:
     image: mbrambilla/forwarder
@@ -35,9 +35,9 @@ services:
     environment:
       KAFKA_BROKER: 192.168.99.100
       KAFKA_PORT: 9092
-      CONFIG_TOPIC_URI: 192.168.99.100:9092/forwarder_config
-      STATUS_TOPIC_URI: 192.168.99.100:9092/forwarder_status
-      STORAGE_TOPIC_URI: 192.168.99.100:9092/forwarder_storage
+      CONFIG_TOPIC_URI: 192.168.99.100:9092/AMOR_forwarderConfig
+      STATUS_TOPIC_URI: 192.168.99.100:9092/AMOR_forwarderStatus
+      STORAGE_TOPIC_URI: 192.168.99.100:9092/AMOR_forwarderData
       OUTPUT_BROKER_URI: 192.168.99.100:9092
     volumes:
       - ./launch-files/launch_forwarder.sh:/launch.sh:ro
@@ -53,8 +53,8 @@ services:
     environment:
       KAFKA_BROKER: 192.168.99.100
       KAFKA_PORT: 9092
-      COMMAND_URI: 192.168.99.100:9092/filewriter_config
-      STATUS_URI: 192.168.99.100:9092/filewriter_status
+      COMMAND_URI: 192.168.99.100:9092/AMOR_filewriterConfig
+      STATUS_URI: 192.168.99.100:9092/AMOR_filewriterStatus
       HDF_OUTPUT_PREFIX: /output-files
     volumes:
       - ../kafkacat/kafkacat:/kafkacat:ro
@@ -71,13 +71,27 @@ services:
     environment:
       KAFKA_BROKER: 192.168.99.100
       BROKER_URI: 192.168.99.100:9092
-      CONFIG_TOPIC_URI: just-bin-it_config
-      HEARTBEAT_TOPIC_URI: just-bin-it_heartbeat
-      RESPONSE_TOPIC_URI: just-bin-it_response
+      CONFIG_TOPIC_URI: AMOR_histCommands
+      HEARTBEAT_TOPIC_URI: AMOR_histHeartbeat
+      RESPONSE_TOPIC_URI: AMOR_histResponse
     volumes:
       - ./launch-files/launch_just-bin-it.sh:/launch.sh:ro
       - ../kafkacat/kafkacat:/kafkacat:ro
     command: /launch.sh
+
+  neutron-event-generator:
+    image: mbrambilla:neutron-event-generator
+    depends_on:
+      - kafka
+    volumes:
+      - $HOME/work/neventGenerator/amor2020n000889.hdf:/nexusfile.hdf:ro
+    environment:
+      KAFKA_BROKER: 192.168.99.100:9092
+      EVENT_STREAM_TOPIC: "FREIA_detector"
+      SOURCE_NEXUS_FILENAME: "/nexusfile.hdf"
+      EVENT_STREAM_PATH: "experiment/data"
+  #
+  #
   # amor-simulation:
   #   image: sinq-epics
   #   networks:
