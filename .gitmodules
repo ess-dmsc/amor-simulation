@@ -1,9 +1,9 @@
 [submodule "amor-ioc"]
-  path = amor/
-  url = ssh://git@git.psi.ch/sinq-epics/amor-ioc.git
+  path = amor/amor-ioc
+  url = https://git.psi.ch/sinq-epics/amor-ioc.git
 
 [submodule "amor-ioc-sim"]
-  path = amor/
-  url = ssh://git@git.psi.ch/sinq-epics/amor-ioc.git amor-ioc-sim
+  path = amor/amor-ioc-sim
+  url = https://git.psi.ch/sinq-epics/amor-ioc-sim.git
 
 
