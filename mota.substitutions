@@ -2,18 +2,17 @@ file "$(TOP)/db/basic_asyn_motor.db"
 {
 pattern
 {P,             N,     M,          DTYP,  PORT, ADDR, DESC,  EGU,      DIR,   VELO,  VBAS, ACCL, BDST, BVEL, BACC, MRES, PREC, DHLM, DLLM,       RDBD, INIT}
-{SQ:AMOR:mota:, 1, "COZ",     "asynMotor",  mota,  1, "coz",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  1209.84,   -100.15, .2,  ""}
-{SQ:AMOR:mota:, 2, "COM",     "asynMotor",  mota,  2, "com", degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    6.351,  -9.299, .2,  ""}
-{SQ:AMOR:mota:, 3, "SOZ",     "asynMotor",  mota,  3, "soz",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    62.,     -118., .01,  ""}
-{SQ:AMOR:mota:, 4, "SOM",     "asynMotor",  mota,  4, "som", degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
-
-{SQ:AMOR:mota:, 5, "COX",     "asynMotor",  mota,  5, "cox",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
-{SQ:AMOR:mota:, 6, "CSZ",     "asynMotor",  mota,  6, "csz",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
-
-{SQ:AMOR:mota:, 7, "SCH",     "asynMotor",  mota,  7, "sch", degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
-{SQ:AMOR:mota:, 8, "SCH",     "asynMotor",  mota,  8, "sch", degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
-{SQ:AMOR:mota:, 9, "STZ",     "asynMotor",  mota,  9, "stz",    mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
-{SQ:AMOR:mota:,10, "SMZ",     "asynMotor",  mota, 10, "smz",     A,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
+{SQ:AMOR:mota:, 1, "coz",     "asynMotor",  mota,  1, "coz",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  1209.84,   -100.15, .2,  ""}
+{SQ:AMOR:mota:, 2, "com",     "asynMotor",  mota,  2, "com", degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    6.351,  -9.299, .2,  ""}
+{SQ:AMOR:mota:, 3, "soz",     "asynMotor",  mota,  3, "soz",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    62.,     -118., .01,  ""}
+{SQ:AMOR:mota:, 4, "som",     "asynMotor",  mota,  4, "som", degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,    14.932,    -13.068, .01,  ""}
+{SQ:AMOR:mota:, 5, "c3z",   "asynMotor",  mota,  5, "c3z",   mm,       Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,   20,    -100,   .033, ""}
+{SQ:AMOR:mota:, 6, "cox",   "asynMotor",  mota,  6, "cox",   mm,       Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,   2,     -200,   .033, ""}
+{SQ:AMOR:mota:, 7, "eoz",   "asynMotor",  mota,  7, "eoz",   mm,       Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,   20,    -90,    .033, ""}
+{SQ:AMOR:mota:, 8, "xlz",   "asynMotor",  mota,  8, "xlz",   mm,       Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,   0.1,   -132,   .033, ""}
+{SQ:AMOR:mota:, 9, "eom",   "asynMotor",  mota,  9, "eom",   degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     2,    -.2,   .033, ""}
+{SQ:AMOR:mota:, 10,"stz",   "asynMotor",  mota,  10, "stz",   mm,      Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  300,     -10,   .033, ""}
+{SQ:AMOR:mota:, 11,"sch",   "asynMotor",  mota,  11, "sch",   degree,  Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  2.428,   -1.372,.033, ""}
 }
 
 
@@ -21,18 +20,17 @@ file "$(TOP)/db/motorMessage.db"
 {
 pattern
 {P,N, M,PORT}
-{SQ:AMOR:mota:, 1, "COZ",mota}
-{SQ:AMOR:mota:, 2, "COM",mota}
-{SQ:AMOR:mota:, 3, "SOZ",mota}
-{SQ:AMOR:mota:, 4, "SOM",mota}
-
-{SQ:AMOR:mota:, 5, "COX",mota}
-{SQ:AMOR:mota:, 6, "CSZ",mota}
-
-{SQ:AMOR:mota:, 7, "SCH",mota}
-{SQ:AMOR:mota:, 8, "SPH",mota}
-{SQ:AMOR:mota:, 9, "STZ",mota}
-{SQ:AMOR:mota:, 10, "SMZ",mota}
+{SQ:AMOR:mota:, 1, "coz",mota}
+{SQ:AMOR:mota:, 2, "com",mota}
+{SQ:AMOR:mota:, 3, "soz",mota}
+{SQ:AMOR:mota:, 4, "som",mota}
+{SQ:AMOR:mota:, 5, "c3z",mota}
+{SQ:AMOR:mota:, 6, "cox",mota}
+{SQ:AMOR:mota:, 7, "eoz",mota}
+{SQ:AMOR:mota:, 8, "xlz",mota}
+{SQ:AMOR:mota:, 9, "eom",mota}
+{SQ:AMOR:mota:, 10, "stz",mota}
+{SQ:AMOR:mota:, 11, "sch",mota}
 
 }
 
