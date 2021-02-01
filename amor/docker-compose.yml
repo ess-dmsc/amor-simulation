@@ -83,6 +83,8 @@ services:
     image: mbrambilla:neutron-event-generator
     depends_on:
       - kafka
+    networks:
+      - default
     volumes:
       - $HOME/work/neventGenerator/amor2020n000889.hdf:/nexusfile.hdf:ro
     environment:
@@ -91,14 +93,14 @@ services:
       SOURCE_NEXUS_FILENAME: "/nexusfile.hdf"
       EVENT_STREAM_PATH: "experiment/data"
   #
-  #
-  # amor-simulation:
+  # epics:
   #   image: sinq-epics
   #   networks:
-  #     - amor_default
+  #     - default
   #   volumes:
   #     - ./amor-ioc-sim:/ioc/sinq-ioc/amor-ioc-sim:ro
   #     - ./launch-files/launch_amor-ioc-sim.sh:/launch.sh:ro
+  #     - ./logs:/logs/
   #   ports:
   #     - 5064:5064/tcp
   #     - 5064:5064/udp
