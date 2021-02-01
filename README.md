@@ -53,6 +53,6 @@ This can raise a mismatch w/ EPICS:
 
 ## s7plcFW EPICS driver
 
-- source: https://git.psi.ch/epics_driver_modules/s7plc
+- source: https://git.psi.ch/epics_driver_modules/s7plcFW
 - documentation: https://intranet.psi.ch/pub/Controls/S7plcFW/s7plcFW.html
 
