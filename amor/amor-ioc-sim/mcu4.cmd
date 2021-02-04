@@ -1,0 +1,5 @@
+motorSimCreateController("mcu4",12)
+motorSimConfigAxis("mcu4",5,270000,-45000,0,0)
+motorSimConfigAxis("mcu4",6,270000,-45000,0,0)
+motorSimConfigAxis("mcu4",7,288000,0,0,0)
+dbLoadTemplate("$(TOP)/mcu4.substitutions")

@@ -1,0 +1,52 @@
+file "$(TOP)/db/s7plcFW_status.db"
+{
+pattern
+{P,M,PORT}
+{SQ:AMOR:SEL2:, "SPS1","SPS-R1"}
+{SQ:AMOR:SEL2:, "SPS2","SPS-R2"}
+{SQ:AMOR:SEL2:, "SPS3","SPS-W"}
+}
+
+file "$(TOP)/db/s7plcFW_write.db"
+{
+pattern
+{P, M, B, I, PORT}
+{SQ:AMOR:SEL2:, "P1",   2, 0, "SPS-W"}
+{SQ:AMOR:SEL2:, "P2",   2, 1, "SPS-W"}
+{SQ:AMOR:SEL2:, "P3",   2, 2, "SPS-W"}
+{SQ:AMOR:SEL2:, "P4",   2, 3, "SPS-W"}
+{SQ:AMOR:SEL2:, "P5",   2, 4, "SPS-W"}
+{SQ:AMOR:SEL2:, "P6",   2, 5, "SPS-W"}
+{SQ:AMOR:SEL2:, "P7",   2, 6, "SPS-W"}
+{SQ:AMOR:SEL2:, "P8",   2, 7, "SPS-W"}
+{SQ:AMOR:SEL2:, "P9",   2, 8, "SPS-W"}
+{SQ:AMOR:SEL2:,"P10",   2, 9, "SPS-W"}
+{SQ:AMOR:SEL2:,"P11",   2,10, "SPS-W"}
+{SQ:AMOR:SEL2:,"P12",   2,11, "SPS-W"}
+{SQ:AMOR:SEL2:,"P13",   2,12, "SPS-W"}
+{SQ:AMOR:SEL2:,"P14",   2,13, "SPS-W"}
+{SQ:AMOR:SEL2:,"P15",   2,14, "SPS-W"}
+{SQ:AMOR:SEL2:,"P16",   2,15, "SPS-W"}
+{SQ:AMOR:SEL2:,"P17",   4, 0, "SPS-W"}
+{SQ:AMOR:SEL2:,"P18",   4, 1, "SPS-W"}
+{SQ:AMOR:SEL2:,"P19",   4, 2, "SPS-W"}
+{SQ:AMOR:SEL2:,"P20",   4, 3, "SPS-W"}
+{SQ:AMOR:SEL2:,"P21",   4, 4, "SPS-W"}
+{SQ:AMOR:SEL2:,"P22",   4, 5, "SPS-W"}
+{SQ:AMOR:SEL2:,"P23",   4, 6, "SPS-W"}
+{SQ:AMOR:SEL2:,"P24",   4, 7, "SPS-W"}
+{SQ:AMOR:SEL2:,"P25",   4, 8, "SPS-W"}
+{SQ:AMOR:SEL2:,"P26",   4, 9, "SPS-W"}
+{SQ:AMOR:SEL2:,"P27",   4,10, "SPS-W"}
+{SQ:AMOR:SEL2:,"P28",   4,11, "SPS-W"}
+{SQ:AMOR:SEL2:,"P29",   4,12, "SPS-W"}
+{SQ:AMOR:SEL2:,"P30",   4,13, "SPS-W"}
+{SQ:AMOR:SEL2:,"P31",   4,14, "SPS-W"}
+{SQ:AMOR:SEL2:,"P32",   4,15, "SPS-W"}
+{SQ:AMOR:SEL2:,"P33",   6, 0, "SPS-W"}
+{SQ:AMOR:SEL2:,"P34",   6, 1, "SPS-W"}
+{SQ:AMOR:SEL2:,"P35",   6, 2, "SPS-W"}
+{SQ:AMOR:SEL2:,"P36",   6, 3, "SPS-W"}
+}
+
+

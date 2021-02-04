@@ -1,0 +1,35 @@
+file "$(TOP)/db/basic_asyn_motor.db"
+{
+pattern
+{P,             N,     M,          DTYP,         PORT, ADDR, DESC,        EGU,   DIR,   VELO,  VBAS, ACCL, BDST, BVEL, BACC,   MRES, PREC,   DHLM,   DLLM,  RDBD,    INIT}
+#{SQ:AMOR:SEL1:, 1,    "L1",       "asynMotor",  sel1,   1,   "Lift1",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     10.3,    0.3,    0.1,  ""}
+#{SQ:AMOR:SEL1:, 2,    "L2",       "asynMotor",  sel1,   2,   "Lift2",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     10.3,    0.3,    0.1,  ""}
+#{SQ:AMOR:SEL1:, 3,    "L3",       "asynMotor",  sel1,   3,   "Lift3",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     10.3,    0.3,    0.1,  ""}
+#{SQ:AMOR:SEL1:, 4,    "L4",       "asynMotor",  sel1,   4,   "Lift4",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     10.3,    0.3,    0.1,  ""}
+#{SQ:AMOR:SEL1:, 5,    "L5",       "asynMotor",  sel1,   5,   "Lift5",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     10.3,    0.3,    0.1,  ""}
+#{SQ:AMOR:SEL1:, 6,    "L6",       "asynMotor",  sel1,   6,   "Lift6",     mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     10.3,    0.3,    0.1,  ""}
+{SQ:AMOR:SEL1:, 7,    "MIRROR1",  "asynMotor",  sel1,   7,   "MIRROR1",   mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     2.5,     -.4,    0.1,  ""}
+{SQ:AMOR:SEL1:, 8,    "MIRROR2",  "asynMotor",  sel1,   8,   "MIRROR2",   mm,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     2.5,     -.4,    0.1,  ""}
+}
+
+file "$(TOP)/db/motorMessage.db"
+{
+pattern
+{P,N, M,PORT}
+{SQ:AMOR:SEL1:, 1, "L1",sel1}
+{SQ:AMOR:SEL1:, 2, "L2",sel1}
+{SQ:AMOR:SEL1:, 3, "L3",sel1}
+{SQ:AMOR:SEL1:, 4, "L4",sel1}
+{SQ:AMOR:SEL1:, 5, "L5",sel1}
+{SQ:AMOR:SEL1:, 6, "L6",sel1}
+{SQ:AMOR:SEL1:, 7, "MIRROR1",sel1}
+{SQ:AMOR:SEL1:, 8, "MIRROR2",sel1}
+}
+
+file "$(TOP)/db/motorSet.db"
+{
+pattern
+{P,N, M,PORT}
+{SQ:AMOR:SEL1:, 7, "MIRROR1",sel1}
+{SQ:AMOR:SEL1:, 8, "MIRROR2",sel1}
+}

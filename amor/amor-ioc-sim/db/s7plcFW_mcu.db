@@ -1,0 +1,15 @@
+
+record(bi, "$(P)$(M):FineAdjustment:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(PORT)/$(B) T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")
+      }
+    
+record(bi, "$(P)$(M):Move") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@$(PORT)/$(B)+68 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")
+      }
+    

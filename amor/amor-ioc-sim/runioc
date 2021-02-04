@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+HTOP=/ioc/sinq-ioc/amor-ioc
+/usr/local/bin/procServ -L /tmp/procServ.log  -f -i ^D^C 20001 ${HTOP}/startamorioc & 
+
+
+

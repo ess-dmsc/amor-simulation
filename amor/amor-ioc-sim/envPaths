@@ -1,0 +1,1 @@
+epicsEnvSet("TOP","/sq_epics/ioc/rhel7/sinq-ioc/amor-ioc")

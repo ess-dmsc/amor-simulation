@@ -1,0 +1,40 @@
+record(bi, "SQ:AMOR:SEL2:MCU1:FineAdjustment:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@SPS-R1/4964 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")
+      }
+
+record(bi, "SQ:AMOR:SEL2:MCU1:Move") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@SPS-R1/4964+68 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")
+      }
+    
+record(bo, "SQ:AMOR:SEL2:MCU1:FineAdjustment:Select") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@SPS-W/0 T=WORD B=0")
+       field(PINI, "YES")
+     }
+
+
+record(bi, "SQ:AMOR:SEL2:MCU2:FineAdjustment:Selected") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@SPS-R2/4964 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")
+      }
+
+record(bi, "SQ:AMOR:SEL2:MCU2:Move") {
+      field (DTYP, "S7plcFW")
+      field (INP,  "@SPS-R2/4964+68 T=BYTE")
+      field (SCAN, "I/O Intr")
+      field (PINI, "YES")
+      }
+    
+record(bo, "SQ:AMOR:SEL2:MCU2:FineAdjustment:Select") {
+       field(DTYP, "S7plcFW")
+       field(OUT, "@SPS-W/0 T=WORD B=1")
+       field(PINI, "YES")
+     }

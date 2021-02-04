@@ -1,0 +1,18 @@
+file "$(TOP)/db/basic_asyn_motor.db"
+{
+pattern
+{P,             N,     M,          DTYP,  PORT, ADDR, DESC,  EGU,      DIR,   VELO,  VBAS, ACCL, BDST, BVEL, BACC,MRES, PREC,  DHLM,    DLLM,    RDBD, INIT}
+{SQ:AMOR:diaphragm:, 5, "dvv",    "asynMotor",  mcu4,  5, "dvv",   deg,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  270.,    -45.,  .01,    ""}
+{SQ:AMOR:diaphragm:, 6, "dvh",    "asynMotor",  mcu4,  6, "dvh",   deg,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  270.,    -45.,  .01,    ""}
+{SQ:AMOR:diaphragm:, 7, "dmf",    "asynMotor",  mcu4,  7, "dnf",   deg,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  288.,      0.,  .01,    ""}
+}
+
+file "$(TOP)/db/motorMessage.db"
+{
+pattern
+{P,N, M,PORT}
+{SQ:AMOR:diaphragm:, 5, "dvv",mcu4}
+{SQ:AMOR:diaphragm:, 6, "dvh",mcu4}
+{SQ:AMOR:diaphragm:, 7, "dmf",mcu4}
+}
+
