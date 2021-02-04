@@ -34,10 +34,6 @@ or
 ```shell
 docker-compose up -d
 ```
-4. launch the epics simulation (currently not part of the docker-compose file)
-```shell
-docker run -it  -v $HOME/work/docker/amor/amor-ioc-sim/:/ioc/sinq-ioc/amor-ioc-sim:ro -p 5064:5064/tcp -p 5064:5064/udp  -p 5080:5080/tcp -p 5080:5080/udp -p 8080:8080 --net amor_default -v $PWD/launch-files/launch_amor-ioc-sim.sh:/launch.sh:ro sinq-epics /launch.sh
-```
 
 ### forwarder/kafka-to-nexus/just-bin-it/neutron-event-generator
 
@@ -66,5 +62,3 @@ echo $DOCKER_HOST
 ## Known bugs
 
 - Despite the `kafkacat` statup system, it is possible that a service fails because the kafka server is up and running, but the topic not yet completely loaded. If this happens, please just  start the single service or start (again) the machine. DO NOT EXECUTE `docker-compose down`
-
-- For some reason the EPICS container fails to run with the `docker-compose`. Make sure to set the `--net` option

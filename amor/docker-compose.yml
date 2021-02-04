@@ -1,5 +1,4 @@
 version: "3"
-
 networks:
   default:
 
@@ -92,19 +91,20 @@ services:
       EVENT_STREAM_TOPIC: "FREIA_detector"
       SOURCE_NEXUS_FILENAME: "/nexusfile.hdf"
       EVENT_STREAM_PATH: "experiment/data"
-  #
-  # epics:
-  #   image: sinq-epics
-  #   networks:
-  #     - default
-  #   volumes:
-  #     - ./amor-ioc-sim:/ioc/sinq-ioc/amor-ioc-sim:ro
-  #     - ./launch-files/launch_amor-ioc-sim.sh:/launch.sh:ro
-  #     - ./logs:/logs/
-  #   ports:
-  #     - 5064:5064/tcp
-  #     - 5064:5064/udp
-  #     - 5080:5080/tcp
-  #     - 5080:5080/udp
-  #     - 8080:8080
-  #   command: /launch.sh
+
+  epics:
+    image: sinq-epics
+    networks:
+      - default
+    tty: True
+    volumes:
+      - ./amor-ioc-sim:/ioc/sinq-ioc/amor-ioc-sim:ro
+      - ./launch-files/launch_amor-ioc-sim.sh:/launch.sh:ro
+      - ./logs:/logs/
+    ports:
+      - 5064:5064/tcp
+      - 5064:5064/udp
+      - 5080:5080/tcp
+      - 5080:5080/udp
+      - 8080:8080
+    command: /launch.sh
