@@ -13,6 +13,9 @@ pattern
 {SQ:AMOR:mota:, 9, "eom",   "asynMotor",  mota,  9, "eom",   degree,   Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,     2,    -.2,   .033, ""}
 {SQ:AMOR:mota:, 10,"stz",   "asynMotor",  mota,  10, "stz",   mm,      Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  300,     -10,   .033, ""}
 {SQ:AMOR:mota:, 11,"sch",   "asynMotor",  mota,  11, "sch",   degree,  Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  2.428,   -1.372,.033, ""}
+{SQ:AMOR:mota:, 12,"smz",   "asynMotor",  mota,  12, "smz",   mA,      Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  100,     -100,  .033, ""}
+{SQ:AMOR:mota:, 13,"sph",   "asynMotor",  mota,  13, "sph",   degree,  Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  2.428,   -1.372,.033, ""}
+{SQ:AMOR:mota:, 14,"sty",   "asynMotor",  mota,  14, "sty",   mm,      Pos,    2.0,   0.1,  .2,    0,    1,   .2,    .001,    3,  300,     -10,   .033, ""}
 }
 
 
@@ -31,6 +34,8 @@ pattern
 {SQ:AMOR:mota:, 9, "eom",mota}
 {SQ:AMOR:mota:, 10, "stz",mota}
 {SQ:AMOR:mota:, 11, "sch",mota}
-
+{SQ:AMOR:mota:, 12, "smz",mota}
+{SQ:AMOR:mota:, 13, "sph",mota}
+{SQ:AMOR:mota:, 14, "sty",mota}
 }
 

@@ -17,10 +17,10 @@ subLen = 0
 motors = []
 port = None
 
-with open(sys.argv[1],'r') as fin:
+with open(sys.argv[1], 'r') as fin:
     line = fin.readline()
     while line:
-        line = line.replace(' ','')
+        line = line.replace(' ', '')
         line = line.strip('{}')
         l = line.split(',')
         if line.find('DHLM') > 0:  # that is the index discovery line
@@ -34,7 +34,8 @@ with open(sys.argv[1],'r') as fin:
         elif subLen > 0:
             l = line.split(',')
             if subLen == len(l):
-                motors.append((l[addridx],l[mresidx],l[lowlimidx],l[highlimidx]))
+                motors.append(
+                    (l[addridx], l[mresidx], l[lowlimidx], l[highlimidx]))
                 port = l[portIdx]
         else:
             pass
@@ -44,13 +45,14 @@ print('%d motors found' % len(motors))
 
 fname = os.path.splitext(sys.argv[1])[0] + '.cmd'
 
-out = open(fname,'w')
+out = open(fname, 'w')
 out.write('motorSimCreateController(\"%s\",%d)\n' % (port, len(motors)+2))
 for mot in motors:
     mres = float(mot[1])
     highlim = int(float(mot[3])/mres)
     lowlim = int(float(mot[2])/mres)
-    out.write('motorSimConfigAxis(\"%s\",%s,%d,%d,0,0)\n' %(port,mot[0],highlim,lowlim))
-out.write('dbLoadTemplate(\"$(TOP)/%s\")\n' % (sys.argv[1])) 
+    out.write('motorSimConfigAxis(\"%s\",%s,%d,%d,0,0)\n' %
+              (port, mot[0], highlim, lowlim))
+out.write('dbLoadTemplate(\"$(TOP)/%s\")\n' % (sys.argv[1]))
 out.close()
 print(fname + ' written')

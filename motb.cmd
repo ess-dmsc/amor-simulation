@@ -1,4 +1,4 @@
-motorSimCreateController("motb",20)
+motorSimCreateController("motb",30)
 motorSimConfigAxis("motb",1,5000,-5000,0,0)
 motorSimConfigAxis("motb",2,105000,-150000,0,0)
 motorSimConfigAxis("motb",3,48000,-48000,0,0)
